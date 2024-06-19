@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Recommendation Service</title>
+  <link rel="stylesheet" href="./travel_recommendations.css">
+</head>
+<body>
+    
+   <nav>
+        <h1 id = "nav_header">Travelino</h1>
+        <ul class="nav_ul">
+            <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+            <li><a href="./about_us.html" id="about_us">About us</a></li>
+            <li><a href="./travel_contact.html" id="contact">Contact Us</a></li>
+            <li><input type="text" id="searchInput" placeholder="Enter a destination or keyword">  </li>
+            <li><button id='btnSearch'>Search</button></li>
+            <li><button id='btnClear'>Clear</button></li>
+        </ul>
+    </nav>
+
+    <div class = "container"> 
+        <div class = "text_background">
+            <div class="overlay-text" id = "introduction">
+                <h1>EXPLORE DREAM DESTINATION</h1>
+                <p>Encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes while pursuing the ideal destination that evokes a sense of wonder.</p>
+                <button id = "call_to_action" onclick="location.href='booking.html'">BOOK NOW</button>
+            </div>
+        </div>
+        <div class = "text_background">
+            <div class = "overlay-text" id = "search_result">
+            <p>will be filled later</p>
+            </div>
+        </div>
+    </div>
+<script src="./travel_recommendation.js"></script>
+</body>
+</html>
