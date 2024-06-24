@@ -81,8 +81,9 @@ a:hover {
 }
 
 .text_background {
-    background-color: #494949;
-    opacity: .7;
+    background-color: rgba(49, 49, 49, .7);
+    /*     background-color: #494949;*/
+    /* opacity: .7; */
     width: 50%;
     margin: 2%;
 }
@@ -91,6 +92,7 @@ a:hover {
     padding: 2%;
     color: #f9f9f9;
     margin: 2%;
+    opacity: 1;
 }
 
 .container {
@@ -130,4 +132,16 @@ a:hover {
 
 .resImg {
     width: 70%;
+}
+
+#searchRes {
+    display: none;
+}
+
+.resCard {
+    border-color: #ff6600;
+    border-width: 2px;
+    border-style: solid;
+    padding: 10px;
+    margin-bottom: 10px;
 }
