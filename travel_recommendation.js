@@ -14,6 +14,7 @@ const countriesN = "countries";
 const templesN = "temples";
 function searchRes() {
     var query = document.getElementById("searchInput").value.toLowerCase();
+    clearSearch();
     fetch("travel_recommendation_api.json")
         .then(response => response.json())
         .then(data => {
@@ -27,7 +28,7 @@ function searchRes() {
                     res = data["temples"];
                 }
             }
-            if (res.size > 0) {
+            if (res.length > 0) {
                 resContainer.style.display = "inline-block";
                 res.forEach(element => {
                     var card = document.createElement("div");
