@@ -127,3 +127,7 @@ a:hover {
     border: none;
     cursor: pointer;
 }
+
+.resImg {
+    width: 70%;
+}
