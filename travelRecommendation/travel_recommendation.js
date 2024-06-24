@@ -7,6 +7,7 @@ const resDiv = document.getElementById("search_result");
 const btnSearch = document.getElementById('btnSearch');
 const btnClear = document.getElementById('btnClear');
 btnSearch.addEventListener('click', searchRes);
+btnClear.addEventListener('click', clearSearch);
 
 const beachesN = "beaches";
 const countriesN = "countries";
@@ -17,16 +18,16 @@ function searchRes() {
         .then(response => response.json())
         .then(data => {
             var res = [];
-            if (beachesN.includes(query)) {
-                res = data["beaches"];
-            } else if (countriesN.includes(query)) {
-                res = data["countries"];
-            } else if (templesN.includes(query)) {
-                res = data["temples"];
+            if (query !== "") {
+                if (beachesN.includes(query)) {
+                    res = data["beaches"];
+                } else if (countriesN.includes(query)) {
+                    res = data["countries"];
+                } else if (templesN.includes(query)) {
+                    res = data["temples"];
+                }
             }
-            // const res = data.find(item => item.name.toLowerCase() === query || item.description.toLowerCase.includes(query));
-
-            if (res) {
+            if (res.size > 0) {
                 resContainer.style.display = "inline-block";
                 res.forEach(element => {
                     var card = document.createElement("div");
@@ -38,11 +39,18 @@ function searchRes() {
                 });
 
             } else {
-                resDiv.innerHTML = 'Destination not found.';
+                resContainer.style.display = "inline-block";
+                resDiv.innerHTML += '<h2>Destination not found.</h2>';
             }
         })
         .catch(error => {
             console.error('Error:', error);
             resDiv.innerHTML = 'An error occurred while fetching data.';
         });
+}
+
+function clearSearch() {
+    document.getElementById("searchInput").value = "";
+    resDiv.innerHTML = "";
+    resContainer.style.display = "none";
 }
