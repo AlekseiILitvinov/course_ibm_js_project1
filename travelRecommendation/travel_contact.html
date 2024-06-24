@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Recommendation Service</title>
+  <link rel="stylesheet" href="./travel_recommendations.css">
+</head>
+<body>
+    
+   <nav>
+        <h1 id = "nav_header">Travelino</h1>
+        <ul class="nav_ul">
+            <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+            <li><a href="./about_us.html" id="about_us">About us</a></li>
+            <li><a href="./travel_contact.html" id="contact">Contact Us</a></li>
+            <li><input type="text" id="searchInput" placeholder="Enter a destination or keyword">  </li>
+            <li><button id='btnSearch'>Search</button></li>
+            <li><button id='btnClear'>Clear</button></li>
+        </ul>
+    </nav>
+
+    <div class = "container"> 
+        <div class = "text_background">
+            <div class="overlay-text" id = "introduction">
+                <h1>Contact Us</h1>
+                <p>Get in touch</p>
+            </div>
+        </div>
+        <div class = "text_background">
+            <div class = "overlay-text" id = "search_result">
+            <form id="contactForm">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" onclick="thankyou()">Submit</button>
+  </form>
+            </div>
+        </div>
+    </div>
+<script src="./travel_recommendation.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Recommendation Service</title>
+  <link rel="stylesheet" href="./travel_recommendations.css">
+</head>
+<body>
+    
+   <nav>
+        <h1 id = "nav_header">Travelino</h1>
+        <ul class="nav_ul">
+            <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+            <li><a href="./about_us.html" id="about_us">About us</a></li>
+            <li><a href="./travel_contact.html" id="contact">Contact Us</a></li>
+            <li><input type="text" id="searchInput" placeholder="Enter a destination or keyword">  </li>
+            <li><button id='btnSearch'>Search</button></li>
+            <li><button id='btnClear'>Clear</button></li>
+        </ul>
+    </nav>
+
+    <div class = "container"> 
+        <div class = "text_background">
+            <div class="overlay-text" id = "introduction">
+                <h1>About Us</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at dictum neque. Ut facilisis felis non dapibus imperdiet. Suspendisse imperdiet, orci vel malesuada vulputate, metus libero placerat mi, sed lobortis sem ipsum vel erat. Integer vel orci quis nisl maximus finibus quis nec purus. Vivamus id nisl at leo sagittis eleifend in eu libero. Nulla scelerisque arcu at ex consequat, a bibendum mi luctus. Cras malesuada mi lectus, eget blandit libero convallis vitae. Proin euismod id tortor sed malesuada. Duis ornare nulla sed est venenatis varius. Vestibulum vitae dictum nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            </div>
+        </div>
+        <div class = "text_background">
+            <div class = "overlay-text" id = "search_result">
+                <h1>Our Team</h1>
+                <div class="card">
+                    <h3>John Doe</h3>
+                    <p>Some guy</p>
+                </div>
+                <div class="card">
+                    <h3>Som Ebody</h3>
+                    <p>Another guy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="./travel_recommendation.js"></script>
+</body>
+</html>
